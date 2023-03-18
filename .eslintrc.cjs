@@ -37,7 +37,7 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'simple-import-sort', 'prettier', 'tailwindcss', 'unused-imports'],
+  plugins: ['react', 'simple-import-sort', 'prettier', 'unused-imports'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'simple-import-sort/exports': 'error',
@@ -64,8 +64,5 @@ module.exports = {
       },
     ],
     'jsx-quotes': ['error', 'prefer-single'],
-    'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/no-custom-classname': 'warn',
-    'tailwindcss/no-contradicting-classname': 'error',
   },
 }
