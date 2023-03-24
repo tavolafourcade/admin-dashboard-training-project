@@ -6,7 +6,7 @@ import Header from '../../components/Header'
 import { mockDataContacts } from '../../data/mockData'
 import { tokens } from '../../theme'
 
-const Team = (): ReactElement => {
+const Contacts = (): ReactElement => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
 
@@ -69,4 +69,4 @@ const Team = (): ReactElement => {
   )
 }
 
-export default Team
+export default Contacts
