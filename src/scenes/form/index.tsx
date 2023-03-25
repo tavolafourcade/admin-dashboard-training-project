@@ -1,4 +1,5 @@
 // import { Box, Button, TextField } from '@mui/react';
+import { ReactElement } from 'react'
 import { Box, Button, TextField } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Formik } from 'formik'
@@ -6,7 +7,15 @@ import * as yup from 'yup'
 
 import Header from '../../components/Header'
 
-const initialValues = {
+interface FormValues {
+  firstName: string
+  lastName: string
+  email: string
+  contact: string
+  address1: string
+  address2: string
+}
+const initialValues: FormValues = {
   firstName: '',
   lastName: '',
   email: '',
@@ -26,9 +35,9 @@ const userSchema = yup.object().shape({
   address2: yup.string().required('required'),
 })
 
-const Form = () => {
+const Form = (): ReactElement => {
   const isNonMobile = useMediaQuery('(min-width: 600px)')
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = (values: FormValues): void => {
     console.log(values)
   }
 
