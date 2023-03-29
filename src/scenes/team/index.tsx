@@ -12,7 +12,7 @@ import { tokens } from '../../theme'
 const Team = (): ReactElement => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
-  console.log('colors', colors)
+
   const columns = [
     { field: 'id', headerName: 'ID' },
     { field: 'name', headerName: 'Name', flex: 1, cellClassName: 'name-column--cell' },
@@ -58,9 +58,9 @@ const Team = (): ReactElement => {
       },
     },
   ]
-
+  const openSideBar = true
   return (
-    <Box m='20px'>
+    <Box m='20px' sx={{ width: `${openSideBar ? 'calc(100% - 270px)' : 'calc(100% - 80)'}` }}>
       <Header title='Team' subtitle='Managing the team members' />
       <Box
         m='40px 0 0 0'
